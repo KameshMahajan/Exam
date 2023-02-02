@@ -1,6 +1,6 @@
 class LinkedList {
 
-    Node head;
+    static Node head;
 
     static class Node {
         int data;
@@ -26,9 +26,18 @@ class LinkedList {
         return;
     }
 
+    public static void display() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + "   ");
+            temp = temp.next;
+        }
+
+    }
+
     public static void main(String args[]) {
         LinkedList list = new LinkedList();
-        list.head = new Node(1);
+        head = new Node(1);
         Node Second = new Node(2);
         Node Third = new Node(3);
         Node four = new Node(4);
