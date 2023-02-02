@@ -13,9 +13,22 @@ class LinkedList {
         }
     }
 
+    public void insertion_at_end(int d) {
+        Node new_node = new Node(d);
+        if (head == null) {
+            head = new Node(d);
+        }
+        new_node.next = null;
+        Node last = head;
+        while (last.next != null)
+            last = last.next;
+        last.next = new_node;
+        return;
+    }
+
     public static void main(String args[]) {
         LinkedList list = new LinkedList();
-        list.head = new Node(1)
+        list.head = new Node(1);
         Node Second = new Node(2);
         Node Third = new Node(3);
         Node four = new Node(4);
